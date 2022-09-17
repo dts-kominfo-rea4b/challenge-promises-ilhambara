@@ -5,7 +5,7 @@ const promiseOutput = async (hasil) => {
   try {
     const theaterIXX = await promiseTheaterIXX();
     const theaterVGC = await promiseTheaterVGC();
-    const arrTheater = [...theaterIXX, theaterVGC];
+    const arrTheater = [...theaterIXX, ...theaterVGC];
 
     return arrTheater.filter((item) => item.hasil === hasil).length;
   } catch (error) {
